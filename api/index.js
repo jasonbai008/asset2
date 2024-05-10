@@ -14,7 +14,7 @@ fs.readdir("../mp3", (err, files) => {
   files.forEach((folderName) => {
     let innerPath = path.resolve(__dirname, `../mp3/${folderName}`);
     let fileArr = fs.readdirSync(innerPath);
-    let linkArr = fileArr.map((name) => `https://lubanseven.gitee.io/asset2/mp3/${folderName}/${name}`);
+    let linkArr = fileArr.map((name) => `https://jasonbai008.github.io/asset2/mp3/${folderName}/${name}`);
     fs.writeFileSync(`./${folderName}.json`, JSON.stringify(linkArr, null, 4));
     // 构建中文名称数组
     nameArr.push(fileArr[0].split("_")[0]);
